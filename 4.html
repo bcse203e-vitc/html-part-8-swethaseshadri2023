@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Password Toggle</title>
+</head>
+<body>
+    <h1>Password Toggle</h1>
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <input type="checkbox" id="showPassword"> Show Password
+    </form>
+    
+    <script>
+        const passwordField = document.getElementById('password');
+        const showPasswordCheckbox = document.getElementById('showPassword');
+        
+        showPasswordCheckbox.addEventListener('change', function() {
+            if (showPasswordCheckbox.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    </script>
+</body>
+</html>
